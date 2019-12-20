@@ -19,8 +19,8 @@ const { addProduct,
 
 app.use(express.json());
 
-app.get('/api/products', getProducts)
-app.post('/api/products', addProduct)
+app.get('/api/products/', getProducts)
+app.post('/api/products/', addProduct)
 
 
 

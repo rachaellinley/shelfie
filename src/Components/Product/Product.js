@@ -15,12 +15,23 @@ class Product extends React.Component {
                 products: response.data
             })
         })
+        
     }
 
+
     render() {
+
+        //{this.props.inventory.map(element => {
+    // const { productName, productPrice, imgUrl } = element;
+    // return (
+    //     <div key={element.id}>
+    //      
+    //      <h3>{productName}</h3>
+            // <h3>{productPrice}</h3>
+            // <img>{imgUrl}</img>
         return(
             <div>
-                {this.state.products}
+            
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+import axios from "axios";
+import './reset.css';
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Form from "./Components/Form/Form";
 import Header from "./Components/Header/Header";
@@ -8,6 +9,7 @@ import Header from "./Components/Header/Header";
 class App extends React.Component {
   constructor(){
       super();
+
   }
   
 
@@ -15,9 +17,10 @@ class App extends React.Component {
       return(
           <div className="App">
               <Header />
-              <Dashboard />
+              <div className="box-1">
+              <Dashboard/>
               <Form />
-             
+              </div>
           </div>
       )
   }

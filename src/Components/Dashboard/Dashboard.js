@@ -5,13 +5,19 @@ import Product from "../Product/Product"
 class Dashboard extends React.Component {
     constructor(){
         super()
+        this.state ={
+            products: []
+        }
+  
     }
+
+
 
     render(){
         return(
             <div>
                 <h1>Dashboard</h1>
-                <Product />
+                <Product inventory={this.state.products}/>
             </div>
         )
     }

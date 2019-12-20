@@ -8,12 +8,21 @@ let products = [
 
 
   function getProducts(req, res) {
-    res.status(200).json(products);
+    const db = req.app.get('db')
+
+    db.getProducts().then(response =>{
+      res.status(200).json(response);
+    })
   }
 
   function addProduct(req, res) {
-    products.push(req.body);
-    res.status(200).json(places);
+    const db = req.app.get('db')
+    const {product_name, product_price, img_url} = req.body;
+
+    db.addProduct(product_name, product_price, img_url).then
+    (response => {
+      res.status(200).json(response);
+    })
   }
   
   

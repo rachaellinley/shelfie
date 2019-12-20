@@ -26,7 +26,19 @@ class Form extends React.Component {
         this.setState({productPrice: value})
     }
 
-    // handleClick 
+    handleClick(){
+        const { productPrice, productName, imgUrl } = this.state;
+        let body = {
+            productName,
+            productPrice,
+            imgUrl
+        }
+
+        axios.post("/api/products/", body).then(response => {
+           console.log('OKAY')
+           this.addProduct(response.data)
+        });
+    }
     
 
     render(){
